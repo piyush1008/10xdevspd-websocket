@@ -28,10 +28,12 @@ function startWorker() {
         try {
             yield client.connect();
             console.log("Worker connected to Redis.");
-            // Main loop
+            // Main loop 
             while (true) {
                 try {
+                    //wait until a problem is submitted on the queue.
                     const submission = yield client.brPop("problems", 0);
+                    console.log("submission", submission);
                     // @ts-ignore
                     yield processSubmission(submission.element);
                 }

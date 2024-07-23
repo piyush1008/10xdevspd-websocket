@@ -1,0 +1,10 @@
+This project include simulating the architecture of the leetcode where a problem is submitted and it is put insidde a queue
+From the queue , it will be picked by the worker node and then some processing is done onit 
+
+
+1. folder express-server contain code for submit endpoint where once a problem is once submitted it will be put on the queue
+
+2. folder worker contains code when problems is put on the queue then it will be taken by the worker node for the processing 
+
+
+BASCIALLY THIS IS IMPLEMENATATION OF MESSAGE QUEUE[USIGN REDIS].
